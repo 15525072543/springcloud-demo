@@ -1,14 +1,22 @@
-package com.study.springcloud;
+package com.study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import tk.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-@MapperScan("com.study.springcloud.mapper")
-@EnableDiscoveryClient // 启动eureka客户端
+@EnableDiscoveryClient
 public class StudyServiceProviderApplication {
+
+    /**
+     * 注入远程调用类
+     */
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 
     public static void main(String[] args) {
         SpringApplication.run(StudyServiceProviderApplication.class, args);

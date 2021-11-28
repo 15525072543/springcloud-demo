@@ -5,5 +5,11 @@ spring:
     url: jdbc:mysql://localhost:3307/disco_mall_study
     username: root
     password: root
+  application:
+    name: service-provider #将来会作为微服务的名称
 mybatis:
   type-aliases-package: com.study.springcloud.pojo
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
