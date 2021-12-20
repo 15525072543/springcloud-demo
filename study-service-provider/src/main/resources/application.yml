@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8085
 spring:
   datasource:
     url: jdbc:mysql://localhost:3307/disco_mall_study
@@ -14,8 +14,8 @@ eureka:
     service-url:
       defaultZone: http://localhost:10086/eureka
     register-with-eureka: true    # 是否注册到Eureka注册中心中
-  instance:
-    lease-renewal-interval-in-seconds: 5   # 服务续约（renew）的间隔，默认30秒
-    lease-expiration-duration-in-seconds: 10 # 服务失效时间，默认90秒
+#  instance:
+#    lease-renewal-interval-in-seconds: 5   # 服务续约（renew）的间隔，默认30秒
+#    lease-expiration-duration-in-seconds: 10 # 服务失效时间，默认90秒
 
 
