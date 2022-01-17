@@ -31,8 +31,6 @@ public class UserController {
         return userClient.queryUserById(id).toString();
     }
 
-
-
     // ----未使用feign组件之前写法-------------------------------------------------
 
     // @Resource
